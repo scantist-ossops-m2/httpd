@@ -4018,13 +4018,6 @@ test_str_l:
             memcpy(ctx->briRC.regmatch, regmatch, sizeof(regmatch));
         }
         break;
-
-    case 'u':
-    case 'U':
-        if (!ap_cstr_casecmpn(uri, "nix:", 4)) {        /* unix:     */
-            *sqs = 1;
-            return 5;
-        }
     }
 
     if (p->flags & CONDFLAG_NOTMATCH) {
